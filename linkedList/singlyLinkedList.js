@@ -69,6 +69,15 @@ class singlyLinkedList {
         prevNode.next = elementNode.next
     }
 
+    // 在链表尾部追加元素
+    append(element){
+        let currentNode = this.head
+        while(currentNode.next != null){
+            currentNode = currentNode.next
+        }
+        let newNode = new Node(element)
+        currentNode.next = newNode
+    }
     // 遍历显示所有节点
     display () {
         let currentNode = this.head
@@ -79,18 +88,26 @@ class singlyLinkedList {
     }
 }
 
+module.exports = {
+    singlyLinkedList,
+    Node
+}
 // test
-let LList = new singlyLinkedList()
-LList.insert('chen', 'head')
-LList.insert('curry', 'chen')
-LList.insert('sang', 'head')
-LList.insert('zhao', 'head')
-console.log('-------------display all item-------')
-LList.display()
-console.log('-------------remove item------------')
-LList.remove('curry')
-LList.display()
-console.log('-------------find by item------------')
-console.log(LList.findByValue('chen').element)
-console.log('-------------find by index------------')
-console.log(LList.findByIndex(2).element)
+function test(){
+    let LList = new singlyLinkedList()
+    LList.insert('chen', 'head')
+    LList.insert('curry', 'chen')
+    LList.insert('sang', 'head')
+    LList.insert('zhao', 'head')
+    console.log('-------------display all item-------')
+    LList.display()
+    console.log('-------------remove item------------')
+    LList.remove('curry')
+    LList.display()
+    console.log('-------------find by item------------')
+    console.log(LList.findByValue('chen').element)
+    console.log('-------------find by index------------')
+    console.log(LList.findByIndex(2).element)
+}
+
+// test()
