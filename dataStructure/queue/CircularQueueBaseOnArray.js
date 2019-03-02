@@ -48,22 +48,6 @@ class circularQueue1{
     }
 }
 
-// test
-let circularQueue1Ins = new circularQueue1(5)
-console.log('--------enqueue---------')
-circularQueue1Ins.enqueue(1)
-circularQueue1Ins.enqueue(2)
-circularQueue1Ins.enqueue(3)
-circularQueue1Ins.enqueue(4)
-circularQueue1Ins.enqueue(5)
-circularQueue1Ins.enqueue(6)
-console.log('-------dequeue----------')
-console.log(circularQueue1Ins.dequeue())
-console.log(circularQueue1Ins.dequeue())
-console.log(circularQueue1Ins.dequeue())
-console.log(circularQueue1Ins.dequeue())
-console.log(circularQueue1Ins.dequeue())
-console.log(circularQueue1Ins.dequeue())
 
 
 /**
@@ -102,18 +86,37 @@ class circularQueue2{
     }
 }
 
+module.exports = {circularQueue1,circularQueue2}
 // test
-let circularQueue2Ins = new circularQueue2(4)
-console.log('--------enqueue---------')
-circularQueue2Ins.enqueue(5)
-circularQueue2Ins.enqueue(4)
-circularQueue2Ins.enqueue(3)
-circularQueue2Ins.enqueue(2)
-circularQueue2Ins.enqueue(1)
-console.log('-------dequeue----------')
-console.log(circularQueue2Ins.dequeue())
-console.log(circularQueue2Ins.dequeue())
-console.log(circularQueue2Ins.dequeue())
-console.log(circularQueue2Ins.dequeue())
-console.log(circularQueue2Ins.dequeue())
+function test(){
+    let circularQueue1Ins = new circularQueue1(5)
+    console.log('--------enqueue---------')
+    circularQueue1Ins.enqueue(1)
+    circularQueue1Ins.enqueue(2)
+    circularQueue1Ins.enqueue(3)
+    circularQueue1Ins.enqueue(4)
+    circularQueue1Ins.enqueue(5)
+    circularQueue1Ins.enqueue(6)
+    console.log('-------dequeue----------')
+    console.log(circularQueue1Ins.dequeue())
+    console.log(circularQueue1Ins.dequeue())
+    console.log(circularQueue1Ins.dequeue())
+    console.log(circularQueue1Ins.dequeue())
+    console.log(circularQueue1Ins.dequeue())
+    console.log(circularQueue1Ins.dequeue())
 
+
+    let circularQueue2Ins = new circularQueue2(4)
+    console.log('--------enqueue---------')
+    circularQueue2Ins.enqueue(5)
+    circularQueue2Ins.enqueue(4)
+    circularQueue2Ins.enqueue(3)
+    circularQueue2Ins.enqueue(2)
+    circularQueue2Ins.enqueue(1)
+    console.log('-------dequeue----------')
+    console.log(circularQueue2Ins.dequeue())
+    console.log(circularQueue2Ins.dequeue())
+    console.log(circularQueue2Ins.dequeue())
+    console.log(circularQueue2Ins.dequeue())
+    console.log(circularQueue2Ins.dequeue())
+}
